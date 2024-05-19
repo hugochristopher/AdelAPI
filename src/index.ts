@@ -3,6 +3,7 @@ import express from 'express';
 import router from './routes/index.ts';
 import bodyParser from 'body-parser';
 import cors from 'cors'
+import './database/mongoConfig.ts'
 
 dotenv.config();
 

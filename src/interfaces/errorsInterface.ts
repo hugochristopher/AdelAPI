@@ -1,0 +1,13 @@
+import { IListProduct } from "./listProductsInterface";
+import { IUsers } from "./usersInterface";
+
+export interface IResponseObj {
+  code: number;
+  message?: string | IUsers[] | IUsers | IListProduct[] | ISectionObj[];
+  token?: string;
+}
+
+export interface ISectionObj {
+  id: number;
+  sectionName: string;
+}
