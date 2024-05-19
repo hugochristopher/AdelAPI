@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 });
 
 router.use('/login', validator.body(bodySchemaLogin), userController.find)
-router.use('/register',  validator.body(bodySchemaRegister),  userController.store)
+router.use('/register', validator.body(bodySchemaRegister),  userController.store)
 
 
 
