@@ -1,9 +1,9 @@
 import { Router } from "express";
-import loginRouter from "./login.routes.ts"
-import usersRouter from "./users.routes.ts"
+import loginRouter from "./login.routes"
+import usersRouter from "./users.routes"
 import { createValidator } from "express-joi-validation";
-import { bodySchemaLogin, bodySchemaRegister } from "../middlewares/usersValidation.ts";
-import UsersController from "../controllers/users.controller.ts";
+import { bodySchemaLogin, bodySchemaRegister } from "../middlewares/usersValidation";
+import UsersController from "../controllers/users.controller";
 
 const userController = new UsersController();
 

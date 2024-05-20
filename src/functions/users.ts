@@ -16,11 +16,11 @@ const hashPassword = (pass: string): Promise<string> => {
   });
 }
 
-export const buildUserToDb = async ({ name, email, password }: IUserRegister)  => {
+export const buildUserToDb = async ({ nickName, email, password }: IUserRegister)  => {
   const hashedPassword = await hashPassword(password);
   return {
     id: uuidv4(),
-    name,
+    nickName,
     email,
     password: hashedPassword,
     updatedAt: new Date().toISOString(),
