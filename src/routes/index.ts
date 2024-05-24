@@ -1,9 +1,8 @@
 import { Router } from "express";
-import loginRouter from "./login.routes"
-import usersRouter from "./users.routes"
 import { createValidator } from "express-joi-validation";
-import { bodySchemaLogin, bodySchemaRegister } from "../middlewares/usersValidation";
+import { bodySchemaLogin, bodySchemaRegister, bodySchemaUpdate } from "../middlewares/usersValidation";
 import UsersController from "../controllers/users.controller";
+import { authUser } from "src/auth";
 
 const userController = new UsersController();
 
@@ -16,8 +15,9 @@ router.get('/', (req, res) => {
   res.send('Welcome to Adel APP API!');
 });
 
-router.use('/login', validator.body(bodySchemaLogin), userController.find)
-router.use('/register', validator.body(bodySchemaRegister),  userController.store)
+router.post('/login', validator.body(bodySchemaLogin), userController.find)
+router.post('/register', validator.body(bodySchemaRegister),  userController.store)
+router.post('/update', validator.body(bodySchemaUpdate), authUser, userController.update)
 
 
 
