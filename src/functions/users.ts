@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import { v4 as uuidv4 } from 'uuid';
 import { IUpdateUser, IUserRegister, IUsers } from '../interfaces/usersInterface';
 
-const hashPassword = (pass: string): Promise<string> => {
+export const hashPassword = (pass: string): Promise<string> => {
   return new Promise<string>((resolve, reject) => {
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(pass, salt, (err, hash) => {

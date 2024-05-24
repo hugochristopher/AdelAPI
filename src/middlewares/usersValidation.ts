@@ -12,10 +12,10 @@ export const bodySchemaRegister = Joi.object({
 })
 
 export const bodySchemaUpdate = Joi.object({
-  name: Joi.string().min(4).optional().allow(''),
+  nickName: Joi.string().min(4).optional().allow(''),
   email: Joi.string().email().optional().allow(''),
   password: Joi.string().min(4).optional().allow(''),
-}).or('name', 'email', 'password');
+}).or('nickName', 'email', 'password');
 
 export const paramsSchemaUpdate = Joi.object({
   id: Joi.string().required(),

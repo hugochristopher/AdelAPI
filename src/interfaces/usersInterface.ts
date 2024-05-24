@@ -46,7 +46,7 @@ export interface IUpdateRequest extends ValidatedRequestSchema {
     idUser: string;
   },
   [ContainerTypes.Body]: {
-    name?: string;
+    nickName?: string;
     email?: string;
     password?: string;
   }
