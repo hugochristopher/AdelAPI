@@ -22,13 +22,14 @@ class UsersService {
 
   public find = async (
     email: string,
-    password: string
+    password: string,
   ): Promise<IResponseObj> => {
-    const userFound = await this._userModel.find({ email });
-    if (!userFound.length) return { code: 404, message: "User not Found!" };
-    if (!checkUser(password, userFound[0].password))
+    const userFound = await this._userModel.findOne({ email });
+    if (!userFound) return { code: 404, message: "User not Found!" };
+    if (!checkUser(password, userFound.password)) {
       return { code: 400, message: "Email or password incorrect!" };
-    const token = safeUser(userFound[0]);
+    }
+    const token = safeUser(userFound);
     return { code: 200, token };
   };
 
