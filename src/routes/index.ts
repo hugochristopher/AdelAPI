@@ -2,7 +2,7 @@ import { Router } from "express";
 import { createValidator } from "express-joi-validation";
 import { bodySchemaLogin, bodySchemaRegister, bodySchemaUpdate } from "../middlewares/usersValidation";
 import UsersController from "../controllers/users.controller";
-import { authUser } from "src/auth";
+import { authUser } from "../auth";
 
 const userController = new UsersController();
 
