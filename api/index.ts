@@ -1,14 +1,14 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import router from './routes/index';
+import router from '../src/routes/index';
 import bodyParser from 'body-parser';
 import cors from 'cors'
-import './database/mongoConfig'
+import '../src/database/mongoConfig'
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
   origin: 'http://localhost:3000',
