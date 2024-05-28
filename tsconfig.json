@@ -7,7 +7,5 @@
     "baseUrl": "./",
     "esModuleInterop": true
   },
-  "include": [
-    "src/**/*"
-, "api/index.ts"  ]
+  "include": ["src/**/*", "src/index.ts"]
 }
