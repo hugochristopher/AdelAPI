@@ -1,12 +1,12 @@
 {
-  "name": "estoque-facil-back",
+  "name": "adel-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/api/index.js",
-    "start:prod": "npm run build && node ./dist/index.js",
+    "start:prod": "npm run build && node ./dist/api/index.js",
     "dev": "ts-node-dev -r dotenv/config -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
     "build": "npx tsc"
   },
