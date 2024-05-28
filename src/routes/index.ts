@@ -12,7 +12,7 @@ const validator = createValidator({
 })
 
 router.get('/', (req, res) => {
-  res.send('Welcome to Adel APP API!');
+  res.send('Welcome to Adel APP API');
 });
 
 router.post('/login', validator.body(bodySchemaLogin), userController.find)
