@@ -18,7 +18,7 @@ class NewsService {
     title: info.title,
     description: info.description,
     createdAt: info.createdAt,
-    src: `${process.env.BASE_URL}/uploads/images/${info.url}`
+    src: `${process.env.BASE_URL}/src/uploads/images/${info.url}`
   }))
 
   public find = async (): Promise<IResponseObj> => {
