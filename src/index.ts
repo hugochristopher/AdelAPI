@@ -19,6 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.use(bodyParser.json())
 app.use('/', router)
+app.use('/uploads', express.static('uploads'))
 
 app.listen(PORT, () => {
   console.log(`Server running on port => ${PORT}`);
