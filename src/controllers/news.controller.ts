@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { ValidatedRequest } from "express-joi-validation";
-import NewsService from "src/service/news.service";
-import { IBodyNewsCreationRequest } from "src/interfaces/newsInterface";
+import NewsService from "../service/news.service";
+import { IBodyNewsCreationRequest } from "../interfaces/newsInterface";
 
 class NewsController {
   private _newsService: NewsService;

@@ -5,8 +5,8 @@ import {
   buildUserToDb,
   checkUser,
 } from "../functions/users";
-import { INews, INewsStore } from "src/interfaces/newsInterface";
-import NewsModel from "src/models/news.model";
+import { INews, INewsStore } from "../interfaces/newsInterface";
+import NewsModel from "../models/news.model";
 
 class NewsService {
   private _newsModel: Model<INews>;
