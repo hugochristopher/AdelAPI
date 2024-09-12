@@ -3,8 +3,8 @@ import { createValidator } from "express-joi-validation";
 import { bodySchemaLogin, bodySchemaRegister, bodySchemaUpdate } from "../middlewares/usersValidation";
 import UsersController from "../controllers/users.controller";
 import { authUser } from "../auth";
-import { bodySchemaNewsCreation } from "src/middlewares/newsValidation";
-import NewsController from "src/controllers/news.controller";
+import { bodySchemaNewsCreation } from "../middlewares/newsValidation";
+import NewsController from "../controllers/news.controller";
 import multer from 'multer';
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
